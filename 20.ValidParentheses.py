@@ -1,4 +1,4 @@
-# url: https://leetcode.com/problems/valid-parentheses/description/
+# url exercise: https://leetcode.com/problems/valid-parentheses/description/
 # Using Data Structure: Stack
 
 class Solution:

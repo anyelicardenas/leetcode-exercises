@@ -1,4 +1,4 @@
--- url:https://leetcode.com/problems/customers-who-bought-all-products/
+-- url exercise:https://leetcode.com/problems/customers-who-bought-all-products/
 
 WITH count_all_products AS (
     SELECT product_key, COUNT(product_key) AS products FROM Product

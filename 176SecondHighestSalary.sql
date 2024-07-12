@@ -1,4 +1,4 @@
--- url del ejercicio: https://leetcode.com/problems/second-highest-salary/?envType=study-plan-v2&envId=top-sql-50
+-- url exercise: https://leetcode.com/problems/second-highest-salary/?envType=study-plan-v2&envId=top-sql-50
 -- nivel medio
 
 WITH find_second_salary AS (

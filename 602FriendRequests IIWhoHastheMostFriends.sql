@@ -1,4 +1,4 @@
--- url del ejercicio:https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/
+-- url exercise: https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/
 WITH prueba AS (
     SELECT requester_id as id
     FROM RequestAccepted
