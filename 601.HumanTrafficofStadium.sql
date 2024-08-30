@@ -1,9 +1,7 @@
 -- url exercise: https://leetcode.com/problems/human-traffic-of-stadium/submissions/1373598094/
 -- Hard level
 WITH people_greater_or_equal_100 AS (
-    SELECT *,
-    LAG(people) OVER() AS last_people,
-    LEAD(people) OVER() AS next_people
+    SELECT *
     FROM Stadium
     WHERE people in (SELECT people FROM Stadium WHERE people >= 100 ORDER BY visit_date)
 ),
@@ -16,10 +14,6 @@ consecutive_ids_evaluation AS (
     LEAD(id, 2) OVER(ORDER BY id) AS second_next_id,
     (id+1) AS id_plus_one
     FROM people_greater_or_equal_100
-    WHERE people >= 100 AND last_people >=100 AND next_people >= 100
-    OR last_people < 100 AND people >= 100 AND next_people >= 100
-    OR people >= 100 AND last_people >=100 AND next_people IS NULL
-    OR people >= 100 AND last_people IS NULL AND next_people
 ),
 
 filter_consecutive_rows AS (
